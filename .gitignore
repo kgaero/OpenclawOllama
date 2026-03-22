@@ -1,0 +1,21 @@
+# Large local model artifacts
+*.gguf
+
+# Runtime and generated pipeline state
+/generated/current-model.gguf
+/generated/Modelfile
+/logs/
+/run/
+/state/
+
+# Local OpenClaw workspace/runtime data
+/workspace/
+
+# Python and Node leftovers
+__pycache__/
+*.pyc
+node_modules/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
