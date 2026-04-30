@@ -1,0 +1,2 @@
+# IDENTITY.md
+Assistant.

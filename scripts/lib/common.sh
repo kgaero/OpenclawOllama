@@ -476,7 +476,16 @@ verify_openclaw_gateway() {
   fi
 
   wait_for_openclaw_ui
-  curl -fsS "${OPENCLAW_UI_URL}__openclaw__/canvas/" >/dev/null 2>&1 || die "OpenClaw canvas host is not reachable at ${OPENCLAW_UI_URL}__openclaw__/canvas/."
+
+  local canvas_attempt
+  for ((canvas_attempt = 1; canvas_attempt <= 10; canvas_attempt++)); do
+    if curl --max-time 2 -fsS "${OPENCLAW_UI_URL}__openclaw__/canvas/" >/dev/null 2>&1; then
+      return 0
+    fi
+    sleep 1
+  done
+
+  warn "OpenClaw gateway is running, but the canvas host did not respond quickly at ${OPENCLAW_UI_URL}__openclaw__/canvas/."
 }
 
 verify_openclaw_agent_smoke() {

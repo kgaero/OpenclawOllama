@@ -1,0 +1,164 @@
+{
+  "agent:main:main": {
+    "sessionId": "0e24ef40-9cd1-453f-b694-abeeb642d037",
+    "updatedAt": 1777556424495,
+    "sessionStartedAt": 1777556402526,
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>browser-automation</name>\n    <description>Use when controlling web pages with the OpenClaw browser tool, especially multi-step flows, login checks, tab management, or recovery from stale refs/timeouts.</description>\n    <location>~/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/dist/extensions/browser/skills/browser-automation/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Audit and harden hosts running OpenClaw for SSH, firewall, updates, exposure, cron checks, and risk posture.</description>\n    <location>~/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>node-connect</name>\n    <description>Diagnose OpenClaw Android, iOS, or macOS node pairing, QR/setup code, route, auth, and connection failures.</description>\n    <location>~/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/node-connect/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, tidy, review, audit, or restructure AgentSkills and SKILL.md files.</description>\n    <location>~/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>taskflow</name>\n    <description>Coordinate multi-step detached tasks as one durable TaskFlow job with owner context, state, waits, and child tasks.</description>\n    <location>~/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/taskflow/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>taskflow-inbox-triage</name>\n    <description>Example TaskFlow pattern for inbox triage, intent routing, waiting on replies, and later summaries.</description>\n    <location>~/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/taskflow-inbox-triage/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tmux</name>\n    <description>Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.</description>\n    <location>~/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/tmux/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather, rain, temperature, and forecasts for locations or travel planning.</description>\n    <location>~/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "browser-automation"
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "node-connect"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "taskflow"
+        },
+        {
+          "name": "taskflow-inbox-triage"
+        },
+        {
+          "name": "tmux",
+          "requiredEnv": []
+        },
+        {
+          "name": "weather",
+          "requiredEnv": []
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "browser-automation",
+          "description": "Use when controlling web pages with the OpenClaw browser tool, especially multi-step flows, login checks, tab management, or recovery from stale refs/timeouts.",
+          "filePath": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/dist/extensions/browser/skills/browser-automation/SKILL.md",
+          "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/dist/extensions/browser/skills/browser-automation",
+          "source": "openclaw-extra",
+          "sourceInfo": {
+            "path": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/dist/extensions/browser/skills/browser-automation/SKILL.md",
+            "source": "openclaw-extra",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/dist/extensions/browser/skills/browser-automation"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Audit and harden hosts running OpenClaw for SSH, firewall, updates, exposure, cron checks, and risk posture.",
+          "filePath": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/healthcheck"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "node-connect",
+          "description": "Diagnose OpenClaw Android, iOS, or macOS node pairing, QR/setup code, route, auth, and connection failures.",
+          "filePath": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/node-connect/SKILL.md",
+          "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/node-connect",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/node-connect/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/node-connect"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create, edit, improve, tidy, review, audit, or restructure AgentSkills and SKILL.md files.",
+          "filePath": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/skill-creator"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "taskflow",
+          "description": "Coordinate multi-step detached tasks as one durable TaskFlow job with owner context, state, waits, and child tasks.",
+          "filePath": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/taskflow/SKILL.md",
+          "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/taskflow",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/taskflow/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/taskflow"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "taskflow-inbox-triage",
+          "description": "Example TaskFlow pattern for inbox triage, intent routing, waiting on replies, and later summaries.",
+          "filePath": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/taskflow-inbox-triage/SKILL.md",
+          "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/taskflow-inbox-triage",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/taskflow-inbox-triage/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/taskflow-inbox-triage"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tmux",
+          "description": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
+          "filePath": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/tmux/SKILL.md",
+          "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/tmux",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/tmux/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/tmux"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather, rain, temperature, and forecasts for locations or travel planning.",
+          "filePath": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/weather/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/kgaer/.nvm/versions/node/v22.20.0/lib/node_modules/openclaw/skills/weather"
+          },
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "lastInteractionAt": 1777556402589,
+    "thinkingLevel": "off",
+    "sessionFile": "/home/kgaer/.openclaw/agents/main/sessions/0e24ef40-9cd1-453f-b694-abeeb642d037.jsonl"
+  }
+}

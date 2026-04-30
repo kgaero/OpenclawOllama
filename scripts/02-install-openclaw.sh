@@ -45,8 +45,10 @@ daemon_flag="--no-install-daemon"
 if have_systemd; then
   daemon_flag="--install-daemon"
   record_service_mode "$OPENCLAW_SERVICE_MODE_FILE" "systemd"
-  if command -v loginctl >/dev/null 2>&1; then
+  if command -v loginctl >/dev/null 2>&1 && have_passwordless_sudo; then
     run sudo loginctl enable-linger "$USER" || true
+  elif command -v loginctl >/dev/null 2>&1; then
+    warn "Passwordless sudo is unavailable; skipping loginctl enable-linger. Gateway will run for the current WSL user session."
   fi
 else
   record_service_mode "$OPENCLAW_SERVICE_MODE_FILE" "manual"
@@ -55,6 +57,7 @@ fi
 log "Running non-interactive OpenClaw onboarding for local Ollama."
 run openclaw onboard \
   --non-interactive \
+  --accept-risk \
   --mode local \
   --workspace "$OPENCLAW_WORKSPACE" \
   --auth-choice ollama \
